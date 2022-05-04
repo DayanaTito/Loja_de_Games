@@ -13,7 +13,6 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
@@ -27,7 +26,7 @@ public class Produto {
 	@NotBlank(message = "Nome é obrigatório!")   
 	private String nome;
 	
-	@Size(max = 500)
+	@Size(max = 2000)
 	private String descricao;
 	
 	@NotNull(message = "Console é obrigatório!")
@@ -36,7 +35,7 @@ public class Produto {
 	
 	private int quantidade;
 	
-	@JsonFormat(shape = JsonFormat.Shape.STRING)
+	//@JsonFormat(shape = JsonFormat.Shape.STRING) // completa com .00, mas na versão .7 não precisa
 	@NotNull(message = "Preço é obrigatório!")
 	@Positive(message = "O preço deve ser maior do que zero!")
 	private BigDecimal preco;
