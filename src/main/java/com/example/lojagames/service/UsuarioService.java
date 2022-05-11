@@ -31,8 +31,6 @@ public class UsuarioService {
 			throw new ResponseStatusException(
 					HttpStatus.BAD_REQUEST, "Usuário é menor de 18 anos", null);
 		
-		if (usuario.getFoto().isBlank())
-				usuario.setFoto("https://i.imgur.com/Zz4rzVR.png");
 
 		usuario.setSenha(criptografarSenha(usuario.getSenha()));
 
