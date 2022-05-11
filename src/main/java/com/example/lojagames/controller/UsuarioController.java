@@ -69,7 +69,7 @@ public class UsuarioController {
 			.orElse(ResponseEntity.status(HttpStatus.BAD_REQUEST).build());
 	}
 	
-	@DeleteMapping("/delete/{id}")// metedo de deletar por id
+	/*@DeleteMapping("/delete/{id}")// metedo de deletar por id
 	public ResponseEntity<?> deletePostagem(@PathVariable Long id) {
 		
 		return usuarioRepository.findById(id)
@@ -78,6 +78,6 @@ public class UsuarioController {
 				return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 			})
 			.orElse(ResponseEntity.notFound().build());
-	}
+	}*/
 
 }
